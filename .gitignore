@@ -1,0 +1,15 @@
+.ey_local_data
+.sass-cache
+.idea
+/.idea
+.phpintel
+/.phpintel
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+
+# Arquivos gerados pelas receitas ou usuários
+/frontend/node_modules/
+/frontend/src/assets/vendor/
+/frontend/dist/

@@ -1,0 +1,21 @@
+db:
+  image: mariadb
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: docker
+    MYSQL_DATABASE: app
+
+data:
+  image: brzdigital/data
+  volumes:
+    - ./:/var/www/html/
+
+web:
+  image: brzdigital/apache-php
+  links:
+    - db:database
+  ports:
+    - 8080:80
+  volumes_from:
+    - data
